@@ -27,7 +27,7 @@ pipeline {
                 sh "echo 'SonarQube'"
             }
         }
-        stage("Analysis Static Secuity Testing") {
+        stage("Static Analysis Security Testing") {
             steps {
                 sh "echo 'SonarQube'"
             }
@@ -47,9 +47,9 @@ pipeline {
                 sh "docker build --tag laravel8cd ."
             }
         }
-        stage("Deploy to staging") {
+        stage("Deploy to prod"){
             steps {
-                sh "docker run -d --rm -p 80:80 --name laravel8cd laravel8cd"
+                sh "php artisan serve --host=0.0.0.0 --port=80"
             }
         }
    }
