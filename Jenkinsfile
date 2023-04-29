@@ -14,7 +14,7 @@ pipeline {
                 sh 'echo DB_PASSWORD= >> .env'
                 sh 'php artisan key:generate'
                 sh 'cp .env .env.testing'
-                sh 'php artisan migrate'
+                //sh 'php artisan migrate'
             }
         }
         stage("Unit test") {
