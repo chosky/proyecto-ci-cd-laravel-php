@@ -49,7 +49,7 @@ pipeline {
         }
         stage("Deploy to prod"){
             steps {
-                sh "php artisan serve --host=0.0.0.0 --port=80"
+                sh "sudo php artisan serve --host=0.0.0.0 --port=80"
             }
         }
    }
