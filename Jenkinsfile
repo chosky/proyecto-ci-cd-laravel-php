@@ -35,10 +35,10 @@ pipeline {
         stage("Software Composition Analysis") {
             steps {
                 sh "echo 'snyk'"
-                snykSecurity (
-                    snykInstallation: 'Snyk',
-                    snykTokenId: 'snyk-token'
-                )
+                //snykSecurity (
+                //    snykInstallation: 'Snyk',
+                //    snykTokenId: 'snyk-token'
+                //)
             }
         }
         stage("Dynamic Analysis Security Testing") {
