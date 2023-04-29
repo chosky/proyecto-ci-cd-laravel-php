@@ -44,7 +44,7 @@ pipeline {
         }
         stage("Docker build") {
             steps {
-                sh "docker build -t test/laravel8cd ."
+                sh "docker build --tag laravel8cd ."
             }
         }
         stage("Deploy to staging") {
